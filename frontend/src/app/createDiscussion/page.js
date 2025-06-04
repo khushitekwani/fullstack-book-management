@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { Heart, MessageSquare } from "lucide-react";
+import { ThumbsUp, MessageSquare } from "lucide-react";
 import {
   getAllBooks,
   getDiscussions,
