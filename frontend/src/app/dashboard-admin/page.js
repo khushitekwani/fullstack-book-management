@@ -53,18 +53,19 @@ export default function DashboardAdmin() {
     loadTabData(activeTab);
   }, [activeTab]);
 
-  useEffect(() => {
-    const loadUsers = async () => {
-      try {
-        const response = await fetchAllMembers();
-        setUsers(response.data.users);
-      } catch (error) {
-        Swal.fire("Error", "Failed to load users", "error");
-      }
-    };
+useEffect(() => {
+  const loadUsers = async () => {
+    try {
+      const response = await fetchAllMembers();
+      setUsers(response.data.users);
+    } catch (error) {
+      Swal.fire("Error", "Failed to load users", "error");
+    }
+  };
 
-    loadUsers();
-  }, []);
+  loadUsers();
+}, [fetchAllMembers]);
+
 
   const loadTabData = async (tab) => {
     setLoading(true);
